@@ -4,7 +4,7 @@ Este é um simples guia para iniciar uma aplicação Flask com um ambiente virtu
 Configuração
 
 Clonar o Repositório:
-git clone https://github.com/seu-usuario/minha-aplicacao-flask.git
+git clone https://github.com/fcalza/python-flask.git
 cd minha-aplicacao-flask
 
 Configurar o Ambiente Virtual:
