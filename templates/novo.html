@@ -1,0 +1,50 @@
+{% extends "template.html" %}
+{% block conteudo %}
+
+<!-- interceptar mensagens flash -->
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+<ul id="messages" class="list-unstyled">
+  {% for message in messages %}
+  <li class="alert alert-success">{{ message }}</li>
+  {% endfor %}
+</ul>
+{% endif %}
+{% endwith %}
+
+
+<form action="{{ url_for('criar') }}" method="post" enctype="multipart/form-data"
+  class="formularioJogo">
+
+  <figure class="img-thumbnail col-md-4 formularioImagem">
+    <img class="img-fluid" src="{{ url_for('imagem', nome_arquivo='capa_padrao.png')}}">
+    <figcaption>
+        <label class="fileContainer">
+        mudar capa
+        <input type="file" name="arquivo" accept=".png">
+        </label>
+    </figcaption>
+  </figure>
+  
+  
+  <fieldset>
+    {{ form.csrf_token }}
+    <div class="form-group inputBox">
+      {{ form.nome.label(class="form-label") }}
+      {{ form.nome(class="form-control") }}
+    </div>
+    <div class="form-group inputBox">
+      {{ form.categoria.label(class="form-label") }}
+      {{ form.categoria(class="form-control") }}
+    </div>
+    <div class="form-group inputBox">
+      {{ form.console.label(class="form-label") }}
+      {{ form.console(class="form-control") }}
+    </div>
+    <div class="form-group buttons">
+      {{ form.salvar(class="btn btn-primary") }}
+    </div>
+  </fieldset>
+</form>
+
+{% endblock %}
