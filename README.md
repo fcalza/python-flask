@@ -1,5 +1,4 @@
-Minha Aplicação Flask
-Este é um simples guia para iniciar uma aplicação Flask com um ambiente virtual e um arquivo requirements.txt.
+Guia para iniciar uma aplicação Flask com um ambiente virtual e um arquivo requirements.txt.
 
 Configuração
 
