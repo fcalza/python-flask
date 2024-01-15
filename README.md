@@ -10,9 +10,9 @@ Configurar o Ambiente Virtual:
 # Instalar, Criar, ativar o virtualenv (caso ainda não tenha)
 pip install virtualenv
 virtualenv venv
-# Ativar o ambiente virtual (Windows)
+## Ativar o ambiente virtual (Windows)
 venv\Scripts\activate
-# Ativar o ambiente virtual (Unix ou MacOS)
+### Ativar o ambiente virtual (Unix ou MacOS)
 source venv/bin/activate
 
 Instalar Dependências:
