@@ -5,10 +5,6 @@ from flask_bcrypt import generate_password_hash
 
 print('Conectando...')
 
-# Descomente se quiser desfazer o banco...
-# conn.cursor().execute("DROP DATABASE `jogoteca`;")
-# conn.commit()
-
 try:
     conn = mysql.connector.connect(user='root', password='root', host='127.0.0.1')
 except mysql.connector.Error as err:
@@ -78,12 +74,5 @@ print(' -------------  Jogos:  -------------')
 for jogo in cursor.fetchall():
     print(jogo[1])
 
-# commitando senão nada tem efeito
 conn.commit()
 cursor.close()
-
-
-# mysql -u root -p
-# show databases
-# use jogoteca
-# select + from jogos
