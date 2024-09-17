@@ -1,5 +1,6 @@
 Guia para iniciar uma aplicação Flask com um ambiente virtual e um arquivo requirements.txt.
 
+
 Configuração
 
 Clonar o Repositório:
